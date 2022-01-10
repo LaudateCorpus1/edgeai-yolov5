@@ -93,6 +93,7 @@ python test.py --data coco.yaml --img 512 --conf 0.001 --iou 0.65 --weights pret
 ``` 
     python export.py --weights pretrained_models/yolov5s6_640_ti_lite/weights/best.pt  --img 640 --batch 1 --simplify --export-nms --opset 11 # export at 640x640 with batch size 1
 ```
+* Apart from exporting the complete ONNX model, above script will generate a prototxt file that contains information of the detection layer. This prototxt file is required to deploy the moodel on TI SoC.
 
 ## **References**
 
